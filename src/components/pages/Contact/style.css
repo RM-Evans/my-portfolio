@@ -1,0 +1,34 @@
+* {
+	font-family: 'Rubik', sans-serif;
+	background-color: #faf9ef;
+}
+
+.contact-page {
+	margin: 0px 15px;
+}
+
+.contact-header {
+	display: flex;
+	justify-content: center;
+
+	font-size: 40px;
+
+	padding: 20px;
+	border-bottom: solid black;
+}
+
+.email-container h2 {
+	font-weight: 500;
+}
+
+.email-link {
+	display: flex;
+	justify-content: center;
+
+	font-size: 30px;
+	font-weight: 500;
+}
+
+a {
+	color: #223e44;
+}

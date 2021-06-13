@@ -1,7 +1,8 @@
 import React from 'react';
+import "./style.css";
 
-const Contact = () => (
-    <div>
+const Contact = () => {
+    return <div>
             <div class="contact-page">
                 <h1 class="contact-header"> Trying to contact me? </h1>
                 <div class="email-container">
@@ -12,6 +13,6 @@ const Contact = () => (
     
     </div>
 
-        );
+};
 
         export default Contact;
