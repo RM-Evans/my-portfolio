@@ -1,5 +1,16 @@
+html {
+	/* min-height: 100vh; */
+	
+  /* padding-bottom: 20px; */
+}
+
+
+
+
 .main-container {
-	margin: 5% 10%;
+	/* height: 100%; */
+	min-height: calc(100vh - 80px);
+	margin: 0% 10%;
   display: flex;
   flex-direction: column;
   /* outline: solid red; */
@@ -13,7 +24,6 @@
 
 	margin: 30px;
 	padding: 5px;
-  
 }
 
 .nav-item {
@@ -22,67 +32,97 @@
   
 }
 
+/* sweeping underline navtabs */
+
+.sweep-to-right {
+	padding: 20px;
+	
+	display: inline-block;
+	transform: perspective(1px) translateZ(0);
+	position: relative;
+	transition: color 0.3s;
+  }
+  .sweep-to-right:before {
+	content: "";
+	position: absolute;
+	top: 63px;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	z-index: -1;
+	/* background: #2098D1; */
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	transition: transform 0.3s ease-out;
+  }
+  .sweep-to-right:hover {
+	color: white;
+  }
+  .sweep-to-right:hover:before {
+	transform: scaleX(1);
+  }
+
+  .sweep-to-right.about:before {
+	background: red;
+  }
+  .sweep-to-right.contact:before {
+	background: red;
+  }
+
+  .sweep-to-right.active:before {
+	transform: scaleX(1);
+	background: #35d120;
+  }
+
 .nav a {
 	text-decoration: none;
+	background-color: #fff; /* necessary for underline effect */
   
 }
+/* end sweep */
 
 /* footer */
 
 footer {
 	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+.footer-container {
+	display: flex;
 	justify-content: space-around;
 
-  padding-top: 20px;
+  
   font-size: 16px;
-
-  flex-shrink: 0;
-
-}
-
-.footer-links a {
-	padding: 0 10px;
-	
-	text-decoration: none;
-
+  height: 20px;
+  
 
 }
 
-.App {
-	text-align: center;
-}
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
+	  .footer-links a:hover svg{
+		animation: bounce 2s linear infinite;
+	  }
+	  
+	  @keyframes bounce {
+		0%,
+		25%,
+		50%,
+		75%,
+		100% {
+		  transform: translateY(0);
+		}
+		40% {
+		  transform: translateY(-20px);
+		}
+		60% {
+		  transform: translateY(-12px);
+		}
+	  }
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
 
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
 
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}

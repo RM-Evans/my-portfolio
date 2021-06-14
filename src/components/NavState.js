@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
-import Home from './pages/Porfolio/Home';
+import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Portfolio from './pages/Porfolio/Portfolio';
+import Portfolio from './pages/Portfolio/Portfolio';
 import Contact from './pages/Contact/Contact';
 
 function NavState() {
@@ -26,7 +26,7 @@ function NavState() {
     return (
         <div>
             {/* Pass the state value and the setter as props to NavTabs */}
-            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} foobarbaz={123} />
             {/* Call the renderPage function passing in the currentPage */}
             <div>{renderPage(currentPage)}</div>
         </div>
