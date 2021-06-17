@@ -1,0 +1,34 @@
+.resume-page {
+	margin: 0px 15px;
+}
+
+.front-header,
+.back-header {
+	font-size: clamp(2.5rem, 50%, 4rem);
+	text-decoration: underline;
+}
+
+.resume-header {
+	display: flex;
+	justify-content: center;
+
+	font-size: 30px;
+
+	padding: 20px;
+	border-bottom: solid black;
+}
+
+.resume-page ul {
+	padding: 0;
+}
+
+.resume-page li {
+	list-style: none;
+
+	font-size: 25px;
+	padding: 5px;
+}
+
+.back-end-container {
+	margin-top: 50px;
+}

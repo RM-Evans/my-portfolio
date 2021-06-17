@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
-import Home from './pages/Home/Home';
+import Resume from './pages/Resume/Resume';
 import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Contact from './pages/Contact/Contact';
+
 
 function NavState() {
     // Using useState, set the default value for currentPage to 'About'
@@ -18,6 +19,8 @@ function NavState() {
                 return <Portfolio />;
             case 'Contact':
                 return <Contact />;
+            case 'Resume':
+                return <Resume />
             default:
                 return <About />;
         }

@@ -1,19 +1,16 @@
 html {
 	/* min-height: 100vh; */
-	
-  /* padding-bottom: 20px; */
+
+	/* padding-bottom: 20px; */
 }
-
-
-
 
 .main-container {
 	/* height: 100%; */
 	min-height: calc(100vh - 80px);
 	margin: 0% 10%;
-  display: flex;
-  flex-direction: column;
-  /* outline: solid red; */
+	display: flex;
+	flex-direction: column;
+	/* outline: solid red; */
 }
 /* style nav tabs */
 
@@ -29,21 +26,72 @@ html {
 .nav-item {
 	font-size: 24px;
 	padding: 5px;
-  
+}
+
+/* sidebar Nav */
+
+.hamburger {
+	position: relative;
+}
+
+.hamburger button {
+	position: fixed;
+	right: 40px;
+	top: 30px;
+	z-index: 18;
+}
+
+.menuNav {
+	list-style: none;
+	position: fixed;
+	top: 0;
+	background: rgb(175, 71, 71);
+	left: 0;
+	bottom: 0;
+	height: 100vh;
+	width: 0;
+	overflow: hidden;
+
+	z-index: 9;
+
+	/* overwrite default styling */
+	padding-left: 0%;
+	margin-top: 0%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menuNav.showMenu {
+	width: 100%;
+}
+
+.menuNav li {
+	padding: 20px 50px;
+	text-decoration: none;
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.menuNav li:first-child {
+	margin-top: 7rem;
 }
 
 /* sweeping underline navtabs */
 
 .sweep-to-right {
 	padding: 20px;
-	
+
 	display: inline-block;
 	transform: perspective(1px) translateZ(0);
 	position: relative;
 	transition: color 0.3s;
-  }
-  .sweep-to-right:before {
-	content: "";
+}
+.sweep-to-right:before {
+	content: '';
 	position: absolute;
 	top: 63px;
 	left: 0;
@@ -54,30 +102,37 @@ html {
 	transform: scaleX(0);
 	transform-origin: 0 50%;
 	transition: transform 0.3s ease-out;
-  }
-  .sweep-to-right:hover {
+}
+.sweep-to-right:hover {
 	color: white;
-  }
-  .sweep-to-right:hover:before {
+}
+.sweep-to-right:hover:before {
 	transform: scaleX(1);
-  }
+}
 
-  .sweep-to-right.about:before {
+.sweep-to-right.about:before {
 	background: red;
-  }
-  .sweep-to-right.contact:before {
+}
+.sweep-to-right.contact:before {
 	background: red;
-  }
+}
 
-  .sweep-to-right.active:before {
+.sweep-to-right.portfolio:before {
+	background: red;
+}
+
+.sweep-to-right.resume:before {
+	background: red;
+}
+
+.sweep-to-right.active:before {
 	transform: scaleX(1);
 	background: #35d120;
-  }
+}
 
 .nav a {
 	text-decoration: none;
 	background-color: #fff; /* necessary for underline effect */
-  
 }
 /* end sweep */
 
@@ -88,41 +143,30 @@ footer {
 	justify-content: center;
 }
 
-
-
-
-
 .footer-container {
 	display: flex;
 	justify-content: space-around;
 
-  
-  font-size: 16px;
-  height: 20px;
-  
-
+	font-size: 16px;
+	height: 20px;
 }
 
+.footer-links a:hover svg {
+	animation: bounce 1s linear infinite;
+}
 
-	  .footer-links a:hover svg{
-		animation: bounce 2s linear infinite;
-	  }
-	  
-	  @keyframes bounce {
-		0%,
-		25%,
-		50%,
-		75%,
-		100% {
-		  transform: translateY(0);
-		}
-		40% {
-		  transform: translateY(-20px);
-		}
-		60% {
-		  transform: translateY(-12px);
-		}
-	  }
-
-
-
+@keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-18px);
+	}
+	60% {
+		transform: translateY(-10px);
+	}
+}

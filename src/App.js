@@ -1,5 +1,6 @@
 
 import './App.css';
+import './components/pages/Resume/Resume.css';
 
 import NavState from './components/NavState';
 import Header from './components/Header';
