@@ -8,7 +8,7 @@ import Contact from './pages/Contact/Contact';
 
 function NavState() {
     // Using useState, set the default value for currentPage to 'About'
-    const [currentPage, handlePageChange] = useState('About');
+    const [currentPage, setCurrentPage] = useState('About');
 
     // The renderPage method uses a switch statement to render the appropriate current page
     const renderPage = () => {
@@ -29,7 +29,7 @@ function NavState() {
     return (
         <div>
             {/* Pass the state value and the setter as props to NavTabs */}
-            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} foobarbaz={123} />
+            <NavTabs currentPage={currentPage} handlePageChange={setCurrentPage}  />
             {/* Call the renderPage function passing in the currentPage */}
             <div>{renderPage(currentPage)}</div>
         </div>

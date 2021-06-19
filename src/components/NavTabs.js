@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Icon, InlineIcon } from '@iconify/react';
 import menuIcon from '@iconify-icons/heroicons-outline/menu';
+import circleX from '@iconify-icons/akar-icons/circle-x';
 
 // Props are passed through our functional component.
 function NavTabs(props) {
@@ -8,7 +9,10 @@ function NavTabs(props) {
 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
-    const hamburgerToggle = () => {
+    const hamburgerToggle = (tab) => {
+        // console.log(tab.target.innerHTML);
+        // on click tab, then close hamburger
+        props.handlePageChange(tab.target.innerHTML);
         setHamburgerOpen(!hamburgerOpen);
     };
 
@@ -23,7 +27,9 @@ function NavTabs(props) {
         return () => window.removeEventListener("resize", updateMedia);
     }, []);
 
-    const hamburgerButton = <button onClick={hamburgerToggle}>{hamburgerOpen ? "Close" : <Icon icon={menuIcon} />}</button>;
+    const hamburgerButton = <button onClick={hamburgerToggle}>{hamburgerOpen ? <Icon icon={circleX} /> : <Icon icon={menuIcon} />}</button>;
+
+
 
     // const navShows = window.innerWidth > 500;
 
@@ -40,7 +46,8 @@ function NavTabs(props) {
                             href={'#' + tab.toLowerCase()}
                             // Whenever a tab is clicked on,
                             // the current page is set through the handlePageChange props.
-                            onClick={() => props.handlePageChange(tab)}
+                            //click events use their own scope
+                            onClick={(e) => hamburgerToggle(e)}
                             className={
                                 props.currentPage === tab ? 'nav-link active' : 'nav-link'
                             }
@@ -86,4 +93,4 @@ function NavTabs(props) {
 export default NavTabs;
 
 
-// npm install --save-dev @iconify/react @iconify-icons/heroicons-outline
+

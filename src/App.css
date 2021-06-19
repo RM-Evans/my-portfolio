@@ -45,7 +45,7 @@ html {
 	list-style: none;
 	position: fixed;
 	top: 0;
-	background: rgb(175, 71, 71);
+	background: rgb(255, 255, 255);
 	left: 0;
 	bottom: 0;
 	height: 100vh;
@@ -169,4 +169,11 @@ footer {
 	60% {
 		transform: translateY(-10px);
 	}
+}
+
+/* fixing stubborn linkedIn icon */
+.linked-in-icon svg {
+	position: relative;
+	top: -10px;
+	padding-left: 5px;
 }
