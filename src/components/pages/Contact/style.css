@@ -2,6 +2,8 @@
 	font-family: 'Rubik', sans-serif;
 }
 
+
+
 .contact-page {
 	margin: 0px 15px;
 }
@@ -18,6 +20,26 @@
 
 .email-container h2 {
 	font-weight: 500;
+}
+
+.email-container fieldset{
+	border: 0;
+}
+
+.email-container input,
+.email-container textarea{
+	border: 0;
+	border-bottom: 1px solid #000;
+	width: 100%;
+    font-size: 16px;
+    padding: 3px 5px;
+}
+
+.email-container button {
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	padding: 5px;
 }
 
 .email-link {

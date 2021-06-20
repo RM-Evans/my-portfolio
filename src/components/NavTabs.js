@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import menuIcon from '@iconify-icons/heroicons-outline/menu';
 import circleX from '@iconify-icons/akar-icons/circle-x';
 

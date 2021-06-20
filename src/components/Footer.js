@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import githubAlt from '@iconify-icons/fa-brands/github-alt';
 import instagramIcon from '@iconify-icons/il/instagram';
 import linkedinIcon from '@iconify-icons/cib/linkedin';
