@@ -1,5 +1,6 @@
 import React from 'react';
 
+import kitchenBuddy from '../../../assets/projectSnaps/kitchen-buddySnap.PNG';
 import virtmuseum from '../../../assets/projectSnaps/virtmuseum.png';
 import weightliftplanner from '../../../assets/projectSnaps/weightliftingplannerTitle.PNG';
 import justABlog from '../../../assets/projectSnaps/justABlogimg.PNG';
@@ -7,7 +8,7 @@ import webStore from '../../../assets/projectSnaps/simpleWebStoreimg.PNG';
 import budgetTracker from '../../../assets/projectSnaps/budgetTrackerimg.PNG';
 import photoPort from '../../../assets/projectSnaps/photoPortimg.PNG';
 
-import Project from './Project'
+import Project from './Project';
 
 const projects = [
   {
@@ -20,7 +21,12 @@ const projects = [
     img: weightliftplanner,
     alt: 'weightlifting planner'
   },
-  
+  {
+    url: 'https://kitchen-buddy.herokuapp.com/',
+    img: kitchenBuddy,
+    alt: 'kitchen buddy'
+  },
+
   {
     url: 'https://guarded-thicket-28101.herokuapp.com',
     img: justABlog,
@@ -32,26 +38,26 @@ const projects = [
     img: budgetTracker,
     alt: 'simple budget tracker'
   },
-      
+
   {
     url: 'https://github.com/RM-Evans/photo-port',
     img: photoPort,
     alt: 'simple gallery portfolio'
   },
-    
+
   {
     url: 'https://github.com/RM-Evans/shop-shop',
     img: webStore,
     alt: 'simple webstore'
   }
 
-]
+];
 
 function Portfolio() {
 
   return (
     <div class="photoList-container">
-      { projects.map(p => <Project project={p} />)}
+      {projects.map(p => <Project project={p} />)}
     </div>
   );
 }
