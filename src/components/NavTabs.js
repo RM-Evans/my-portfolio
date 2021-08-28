@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import menuIcon from '@iconify-icons/heroicons-outline/menu';
-import circleX from '@iconify-icons/akar-icons/circle-x';
+// import circleX from '@iconify-icons/akar-icons/circle-x';
 
 // Props are passed through our functional component.
 function NavTabs(props) {
@@ -27,8 +27,8 @@ function NavTabs(props) {
         return () => window.removeEventListener("resize", updateMedia);
     }, []);
 
-    const hamburgerButton = <button onClick={hamburgerToggle}>{hamburgerOpen ? <Icon icon={circleX} /> : <Icon icon={menuIcon} />}</button>;
-
+    const hamburgerButton = <div className="hamburgerContainer">{hamburgerOpen ? null : <Icon icon={menuIcon} onClick={hamburgerToggle} height={45} />}</div>;
+    {/* <button onClick={hamburgerToggle} */ }
 
 
     // const navShows = window.innerWidth > 500;

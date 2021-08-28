@@ -7,3 +7,23 @@
 	padding: 20px;
 	border-bottom: solid black;
 }
+
+.about-text-container {
+	font-size: 200%;
+}
+
+.about-text-container h2 {
+	padding-bottom: 20px;
+}
+
+.about-text-container h3 {
+	font-weight: 600;
+	line-height: 1.8;
+}
+
+@media (max-width: 770px) {
+	.about-text-container {
+		/* font-size: initial; */
+		font-size: 110%;
+	}
+}
